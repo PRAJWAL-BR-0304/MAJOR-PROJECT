@@ -175,10 +175,10 @@ export default function PatientVerifyPage() {
       <header className="border-b bg-background/80 backdrop-blur-xl">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-white shadow-lg">
               <ShieldCheck className="h-5 w-5" />
             </div>
-            <span className="text-xl font-bold">MediTrustChain</span>
+            <span className="text-xl font-bold">MedAssure</span>
           </Link>
           <Button asChild variant="outline">
             <Link href="/login">Stakeholder Login</Link>
@@ -196,8 +196,8 @@ export default function PatientVerifyPage() {
           {/* Hero Section */}
           <div className="text-center space-y-4 py-8">
             <div className="flex justify-center">
-              <div className="p-4 bg-emerald-100 dark:bg-emerald-900/30 rounded-2xl">
-                <ShieldCheck className="h-16 w-16 text-emerald-600 dark:text-emerald-400" />
+              <div className="p-4 bg-primary/10 dark:bg-primary/20 rounded-2xl">
+                <ShieldCheck className="h-16 w-16 text-primary dark:text-primary" />
               </div>
             </div>
             <h1 className="text-4xl font-bold">Verify Medicine Authenticity</h1>

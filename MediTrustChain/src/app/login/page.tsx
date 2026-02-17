@@ -10,9 +10,10 @@ import { useCbacAuth } from "@/contexts/cbac-auth-context";
 import { useState } from "react";
 import { RoleSelector } from "@/components/role-selector";
 import { useErrorHandler } from "@/hooks/use-error-handler";
-import { Loader2, ShieldCheck, ArrowRight, Sparkles, Users } from "lucide-react";
+import { Loader2, ArrowRight, Sparkles, Users, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { Logo } from "@/components/logo";
 
 export default function LoginPage() {
   const { loginStakeholder, loginAdmin } = useCbacAuth();
@@ -77,18 +78,21 @@ export default function LoginPage() {
           >
             {/* Logo */}
             <Link href="/verify" className="flex items-center gap-3 mb-8 hover:opacity-80 transition-opacity cursor-pointer group">
-              <div className="p-3 bg-white/20 backdrop-blur-sm rounded-xl group-hover:bg-white/30 transition-colors">
-                <ShieldCheck className="h-10 w-10" />
+              <div className="p-3 bg-white/20 backdrop-blur-sm rounded-2xl group-hover:bg-white/30 transition-colors">
+                <svg viewBox="0 0 24 24" fill="none" className="h-10 w-10 text-white" strokeWidth="2">
+                  <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z" fill="currentColor" fillOpacity="0.2" stroke="currentColor" />
+                  <path d="M12 8v8M8 12h8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                </svg>
               </div>
               <div>
-                <h1 className="text-3xl font-bold tracking-tight">MediTrustChain</h1>
-                <p className="text-white/70 text-sm">Blockchain-Powered Security</p>
+                <h1 className="text-3xl font-bold tracking-tight">MedAssure</h1>
+                <p className="text-white/70 text-sm">Trusted Supply Chain</p>
               </div>
             </Link>
 
             {/* Main headline */}
             <h2 className="text-4xl xl:text-5xl font-bold leading-tight mb-6">
-              Secure Your
+              Protect Your
               <br />
               <span className="text-white/90">Pharmaceutical</span>
               <br />
@@ -133,10 +137,7 @@ export default function LoginPage() {
         >
           {/* Mobile Logo */}
           <Link href="/verify" className="lg:hidden flex items-center justify-center gap-2 mb-8 hover:opacity-80 transition-opacity">
-            <div className="p-2 bg-primary/10 rounded-lg">
-              <ShieldCheck className="h-8 w-8 text-primary" />
-            </div>
-            <span className="text-2xl font-bold tracking-tight">MediTrustChain</span>
+            <Logo size="md" />
           </Link>
 
           <Card className="border-0 shadow-2xl shadow-primary/5 bg-card/80 backdrop-blur-sm">
@@ -230,10 +231,10 @@ export default function LoginPage() {
                 <Button
                   type="button"
                   variant="outline"
-                  className="w-full h-12 text-base font-semibold border-2 hover:border-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950"
+                  className="w-full h-12 text-base font-semibold border-2 hover:border-accent hover:bg-accent/5"
                   onClick={() => router.push('/verify')}
                 >
-                  <Users className="mr-2 h-5 w-5 text-emerald-600" />
+                  <Users className="mr-2 h-5 w-5 text-accent" />
                   Verify Medicine as Patient
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -244,7 +245,7 @@ export default function LoginPage() {
                     <div className="w-full border-t border-border/50" />
                   </div>
                   <div className="relative flex justify-center text-xs uppercase">
-                    <span className="bg-card px-3 text-muted-foreground">New to MediTrustChain?</span>
+                    <span className="bg-card px-3 text-muted-foreground">New to MedAssure?</span>
                   </div>
                 </div>
 
@@ -255,9 +256,9 @@ export default function LoginPage() {
                   </p>
                   <Link 
                     href="/admin/login"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
                   >
-                    <ShieldCheck className="h-4 w-4" />
+                    <Shield className="h-4 w-4" />
                     Admin Portal Login
                     <ArrowRight className="h-4 w-4" />
                   </Link>

@@ -36,7 +36,7 @@ const roleInfoMap: Record<OrganizationType | 'admin', RoleInfo> = {
     name: "Distributor",
     description: "Move batches in supply chain",
     icon: Truck,
-    color: "from-emerald-500 to-emerald-600",
+    color: "from-primary to-accent",
   },
   logistics: {
     id: "logistics",

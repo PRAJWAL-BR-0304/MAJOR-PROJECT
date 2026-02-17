@@ -18,8 +18,15 @@ import { BlockchainProvider } from '@/lib/blockchain';
 import '@/lib/clear-data'; // Import to expose clear functions to window
 
 export const metadata: Metadata = {
-  title: 'MediTrustChain',
-  description: 'Blockchain-based pharmaceutical supply chain for drug authenticity and transparency',
+  title: 'MedAssure | Trusted Pharmaceutical Supply Chain',
+  description: 'MedAssure - Blockchain-powered pharmaceutical supply chain security. Ensure drug authenticity, prevent counterfeits, and protect patients with immutable verification.',
+  keywords: ['pharmaceutical', 'supply chain', 'blockchain', 'drug authenticity', 'healthcare', 'medical', 'verification'],
+  authors: [{ name: 'MedAssure' }],
+  openGraph: {
+    title: 'MedAssure | Trusted Pharmaceutical Supply Chain',
+    description: 'Blockchain-powered pharmaceutical supply chain security for drug authenticity and patient safety.',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -32,15 +39,17 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <meta name="theme-color" content="#0ea5e9" />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased min-h-screen bg-background">
         <ErrorBoundary>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
-            disableTransitionOnChange
+            disableTransitionOnChange={false}
           >
             <BlockchainProvider>
               <CbacAuthProvider>

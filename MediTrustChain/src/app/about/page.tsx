@@ -19,7 +19,7 @@ export default function AboutPage() {
       icon: Factory,
       title: "Batch Creation",
       description: "Manufacturers register new batches of medicine on the blockchain, creating a unique and immutable digital identity for each batch.",
-      color: "from-emerald-500 to-green-600"
+      color: "from-primary to-accent"
     },
     {
       icon: ClipboardCheck,
@@ -70,17 +70,17 @@ export default function AboutPage() {
       <header className="px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center bg-background/80 backdrop-blur-xl border-b border-border/40 sticky top-0 z-50">
         <div className="container mx-auto max-w-7xl flex items-center justify-between w-full">
           <Link href="/" className="flex items-center gap-2 sm:gap-3">
-            <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-500/20 shrink-0">
+            <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-white shadow-lg shadow-primary/20 shrink-0">
               <ShieldCheck className="h-4 w-4 sm:h-5 sm:w-5" />
             </div>
-            <span className="text-base sm:text-xl font-bold tracking-tight">MediTrustChain</span>
+            <span className="text-base sm:text-xl font-bold tracking-tight">MedAssure</span>
           </Link>
           <nav className="flex items-center gap-2 sm:gap-4">
             <ThemeToggleClientWrapper />
             <Button asChild variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground text-sm hidden sm:inline-flex">
               <Link href="/login">Login</Link>
             </Button>
-            <Button asChild size="sm" className="bg-emerald-600 hover:bg-emerald-700 shadow-lg shadow-emerald-500/20 text-xs sm:text-sm h-8 sm:h-9 px-3 sm:px-4">
+            <Button asChild size="sm" className="bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 text-xs sm:text-sm h-8 sm:h-9 px-3 sm:px-4">
               <Link href="/login" className="flex items-center gap-1">
                 <span className="hidden sm:inline">Get Started</span>
                 <span className="sm:hidden">Start</span>
@@ -95,8 +95,8 @@ export default function AboutPage() {
         {/* Hero Section */}
         <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
           {/* Background */}
-          <div className="absolute inset-0 bg-gradient-to-b from-emerald-50/50 via-transparent to-transparent dark:from-emerald-950/20" />
-          <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-400/20 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent dark:from-primary/10" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl" />
           <div className="absolute inset-0 bg-[linear-gradient(rgba(16,185,129,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
@@ -107,18 +107,18 @@ export default function AboutPage() {
               animate="animate"
               variants={fadeInUp}
             >
-              <span className="inline-flex items-center gap-2 rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-4 py-1.5 text-sm font-medium text-emerald-700 dark:text-emerald-400 ring-1 ring-emerald-500/20 mb-6">
+              <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary ring-1 ring-primary/20 mb-6">
                 About Our Platform
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
                 Revolutionizing
                 <br />
-                <span className="bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                   Pharmaceutical Safety
                 </span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                MediTrustChain leverages blockchain technology to bring transparency, security, and trust to the pharmaceutical supply chain. Combat counterfeit drugs and ensure patient safety.
+                MedAssure leverages blockchain technology to bring transparency, security, and trust to the pharmaceutical supply chain. Combat counterfeit drugs and ensure patient safety.
               </p>
             </motion.div>
           </div>
@@ -134,7 +134,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">How It Works</span>
+              <span className="text-sm font-semibold text-primary uppercase tracking-wider">How It Works</span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 mb-4">
                 Four Simple Steps
               </h2>
@@ -153,10 +153,10 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                 >
-                  <div className="bg-card rounded-2xl border p-6 h-full transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1">
+                  <div className="bg-card rounded-2xl border p-6 h-full transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1">
                     <div className={`flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${step.color} text-white shadow-lg mb-5 relative shrink-0`}>
                       <step.icon className="h-7 w-7" />
-                      <span className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-background text-xs font-bold border-2 border-emerald-500">
+                      <span className="absolute -top-2 -right-2 flex h-6 w-6 items-center justify-center rounded-full bg-background text-xs font-bold border-2 border-primary">
                         {index + 1}
                       </span>
                     </div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
                   </div>
                   {/* Connection arrow for desktop */}
                   {index < steps.length - 1 && (
-                    <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2 text-emerald-500/50 z-10">
+                    <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2 text-primary/50 z-10">
                       <ChevronRight className="h-6 w-6" />
                     </div>
                   )}
@@ -187,7 +187,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Platform Features</span>
+              <span className="text-sm font-semibold text-primary uppercase tracking-wider">Platform Features</span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 mb-4">
                 Built for Enterprise
               </h2>
@@ -200,13 +200,13 @@ export default function AboutPage() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  className="bg-card border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:border-emerald-500/30 hover:-translate-y-1"
+                  className="bg-card border rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:border-primary/30 hover:-translate-y-1"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 mx-auto mb-4 shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mx-auto mb-4 shrink-0">
                     <feature.icon className="h-6 w-6" />
                   </div>
                   <h3 className="font-semibold mb-2 text-foreground">{feature.title}</h3>
@@ -228,14 +228,14 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">AI-Powered Support</span>
+                <span className="text-sm font-semibold text-primary uppercase tracking-wider">AI-Powered Support</span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
                   Have Questions?
                   <br />
-                  <span className="text-emerald-600">Ask Our AI Assistant</span>
+                  <span className="text-primary">Ask Our AI Assistant</span>
                 </h2>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Our intelligent assistant can help answer your questions about MediTrustChain, the pharmaceutical supply chain, and how blockchain technology ensures drug safety.
+                  Our intelligent assistant can help answer your questions about MedAssure, the pharmaceutical supply chain, and how blockchain technology ensures drug safety.
                 </p>
                 <ul className="space-y-3">
                   {[
@@ -245,7 +245,7 @@ export default function AboutPage() {
                     "Discover platform features"
                   ].map((item, index) => (
                     <li key={index} className="flex items-center gap-3 text-muted-foreground">
-                      <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0" />
+                      <div className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
                       <span className="text-sm md:text-base">{item}</span>
                     </li>
                   ))}
@@ -269,7 +269,7 @@ export default function AboutPage() {
         <section className="py-16 md:py-20 lg:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <motion.div
-              className="relative overflow-hidden rounded-2xl md:rounded-3xl bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500 p-8 sm:p-12 md:p-16 text-center text-white"
+              className="relative overflow-hidden rounded-2xl md:rounded-3xl bg-gradient-to-br from-primary via-primary/90 to-accent p-8 sm:p-12 md:p-16 text-center text-white"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -286,7 +286,7 @@ export default function AboutPage() {
                   Join the future of pharmaceutical supply chain security today.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <Button asChild size="lg" className="h-11 sm:h-12 px-6 sm:px-8 bg-white text-emerald-700 hover:bg-white/90 shadow-xl w-full sm:w-auto">
+                  <Button asChild size="lg" className="h-11 sm:h-12 px-6 sm:px-8 bg-white text-primary hover:bg-white/90 shadow-xl w-full sm:w-auto">
                     <Link href="/login" className="flex items-center justify-center gap-2">
                       <span>Create Free Account</span>
                       <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -306,13 +306,13 @@ export default function AboutPage() {
       <footer className="border-t bg-muted/20 py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 text-white shrink-0">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-white shrink-0">
               <ShieldCheck className="h-4 w-4" />
             </div>
-            <span className="font-bold">MediTrustChain</span>
+            <span className="font-bold">MedAssure</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2025 MediTrustChain. All rights reserved.
+            © 2026 MedAssure. All rights reserved.
           </p>
         </div>
       </footer>

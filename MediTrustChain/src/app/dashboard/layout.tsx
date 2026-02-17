@@ -8,8 +8,9 @@ import { DashboardNav } from "@/components/dashboard/dashboard-nav";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, ShieldCheck, Loader2 } from "lucide-react";
+import { Menu, Loader2 } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Logo, LogoCompact } from "@/components/logo";
 
 import { Notifications } from "@/components/dashboard/notifications";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -33,12 +34,18 @@ export default function DashboardLayout({
 
   if (!isMounted) {
     return (
-      <div className="flex items-center justify-center h-screen bg-gradient-to-b from-background to-muted/30">
+      <div className="flex items-center justify-center h-screen bg-gradient-to-br from-background via-background to-primary/5">
         <div className="flex flex-col items-center gap-4">
-          <div className="p-4 bg-emerald-500/10 rounded-2xl">
-            <Loader2 className="h-8 w-8 text-emerald-600 animate-spin" />
+          <div className="relative">
+            <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl animate-pulse" />
+            <div className="relative p-4 bg-gradient-to-br from-primary to-accent rounded-2xl shadow-lg shadow-primary/20">
+              <Loader2 className="h-8 w-8 text-white animate-spin" />
+            </div>
           </div>
-          <p className="text-muted-foreground font-medium">Loading dashboard...</p>
+          <div className="text-center">
+            <p className="text-lg font-semibold text-foreground">MedAssure</p>
+            <p className="text-sm text-muted-foreground">Loading dashboard...</p>
+          </div>
         </div>
       </div>
     );
@@ -49,27 +56,24 @@ export default function DashboardLayout({
   }
 
   return (
-    <div className="min-h-screen w-full flex flex-col bg-gradient-to-b from-background to-muted/20">
+    <div className="min-h-screen w-full flex flex-col bg-gradient-to-br from-background via-background to-primary/3">
       {/* Professional Header */}
-      <header className="sticky top-0 z-50 flex h-16 items-center gap-4 border-b border-border/40 bg-background/80 backdrop-blur-xl px-4 md:px-6">
+      <header className="sticky top-0 z-50 flex h-16 items-center gap-4 border-b border-border/40 bg-background/80 backdrop-blur-xl px-4 md:px-6 shadow-sm">
         {isMobile ? (
           <Sheet>
             <SheetTrigger asChild>
-              <Button size="icon" variant="ghost" className="shrink-0 hover:bg-emerald-500/10">
+              <Button size="icon" variant="ghost" className="shrink-0 hover:bg-primary/10">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="sm:max-w-xs border-r border-border/40">
+            <SheetContent side="left" className="sm:max-w-xs border-r border-border/40 bg-background/95 backdrop-blur-xl">
               <nav className="grid gap-6 text-lg font-medium pt-4">
                 <Link
                   href="/dashboard"
                   className="flex items-center gap-3 mb-4"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-500/20">
-                    <ShieldCheck className="h-5 w-5" />
-                  </div>
-                  <span className="text-lg font-bold tracking-tight">MediTrustChain</span>
+                  <Logo size="sm" />
                 </Link>
                 <DashboardNav isMobile={true} />
               </nav>
@@ -77,10 +81,7 @@ export default function DashboardLayout({
           </Sheet>
         ) : (
           <Link href="/dashboard" className="mr-6 flex items-center gap-3 group">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-500/20 group-hover:shadow-xl group-hover:shadow-emerald-500/30 transition-all duration-300">
-              <ShieldCheck className="h-5 w-5" />
-            </div>
-            <span className="text-xl font-bold tracking-tight text-foreground">MediTrustChain</span>
+            <Logo size="sm" />
           </Link>
         )}
         

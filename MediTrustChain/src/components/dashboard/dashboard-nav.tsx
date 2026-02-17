@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useCbacAuth, type OrganizationType } from "@/contexts/cbac-auth-context";
 import {
   Info,
-  ShieldCheck,
   Factory,
   Truck,
   Building,
@@ -14,7 +13,8 @@ import {
   Warehouse,
   FlaskConical,
   ChevronRight,
-  Shield
+  Shield,
+  LayoutDashboard
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -67,22 +67,25 @@ export function DashboardNav({ isMobile = false }: { isMobile?: boolean }) {
       <Link
         href={href}
         className={cn(
-          "group relative flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200",
+          "group relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-200",
           isActive 
-            ? "text-emerald-600 dark:text-emerald-400" 
+            ? "text-primary" 
             : "text-muted-foreground hover:text-foreground",
           isMobile && "text-base py-3"
         )}
       >
         {/* Active indicator */}
         {isActive && !isMobile && (
-          <span className="absolute inset-0 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/15" />
+          <span className="absolute inset-0 rounded-xl bg-primary/10" />
+        )}
+        {isActive && isMobile && (
+          <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 rounded-r-full bg-primary" />
         )}
         
         <Icon className={cn(
-          "h-4 w-4 shrink-0 transition-colors duration-200",
+          "h-4 w-4 shrink-0 transition-all duration-200",
           isActive 
-            ? "text-emerald-600 dark:text-emerald-400" 
+            ? "text-primary" 
             : "text-muted-foreground group-hover:text-foreground",
           isMobile && "h-5 w-5"
         )} />
@@ -91,8 +94,8 @@ export function DashboardNav({ isMobile = false }: { isMobile?: boolean }) {
         
         {isMobile && (
           <ChevronRight className={cn(
-            "ml-auto h-4 w-4 text-muted-foreground/50",
-            isActive && "text-emerald-600 dark:text-emerald-400"
+            "ml-auto h-4 w-4 text-muted-foreground/50 transition-transform duration-200 group-hover:translate-x-0.5",
+            isActive && "text-primary"
           )} />
         )}
       </Link>

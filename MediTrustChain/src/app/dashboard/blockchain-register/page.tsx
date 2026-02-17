@@ -14,7 +14,7 @@ export default function BlockchainRegistrationPage() {
           {/* Header */}
           <div className="space-y-2">
             <h1 className="text-3xl font-bold flex items-center gap-3">
-              <Shield className="h-8 w-8 text-emerald-600" />
+              <Shield className="h-8 w-8 text-primary" />
               Blockchain Registration
             </h1>
             <p className="text-muted-foreground">
@@ -36,7 +36,7 @@ export default function BlockchainRegistrationPage() {
                 </ul>
                 <p className="text-xs text-muted-foreground mt-3">
                   <strong>Note:</strong> You'll need some Sepolia testnet ETH to pay for gas fees. 
-                  Get free testnet ETH from a <a href="https://sepoliafaucet.com" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:underline">Sepolia faucet</a>.
+                  Get free testnet ETH from a <a href="https://sepoliafaucet.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Sepolia faucet</a>.
                 </p>
               </div>
             </AlertDescription>

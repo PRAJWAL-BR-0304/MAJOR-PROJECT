@@ -51,7 +51,7 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900 p-4">
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] pointer-events-none" />
 
       <motion.div
@@ -60,19 +60,19 @@ export default function AdminLoginPage() {
         variants={fadeInUp}
         className="w-full max-w-md relative z-10"
       >
-        <Card className="border-emerald-500/20 shadow-2xl bg-background/95 backdrop-blur">
+        <Card className="border-primary/20 shadow-2xl bg-background/95 backdrop-blur">
           <CardHeader className="space-y-4 text-center">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              className="mx-auto w-20 h-20 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/30"
+              className="mx-auto w-20 h-20 bg-gradient-to-br from-primary to-primary/90 rounded-2xl flex items-center justify-center shadow-lg shadow-primary/30"
             >
               <Shield className="w-10 h-10 text-white" />
             </motion.div>
 
             <div>
-              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent">
+              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Admin Portal
               </CardTitle>
               <CardDescription className="text-base mt-2">
@@ -96,7 +96,7 @@ export default function AdminLoginPage() {
                     placeholder="admin@meditrust.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10 h-12 border-muted-foreground/20 focus:border-emerald-500"
+                    className="pl-10 h-12 border-muted-foreground/20 focus:border-primary"
                     disabled={isLoading}
                     required
                   />
@@ -116,7 +116,7 @@ export default function AdminLoginPage() {
                     placeholder="Enter your password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="pl-10 pr-10 h-12 border-muted-foreground/20 focus:border-emerald-500"
+                    className="pl-10 pr-10 h-12 border-muted-foreground/20 focus:border-primary"
                     disabled={isLoading}
                     required
                   />
@@ -141,7 +141,7 @@ export default function AdminLoginPage() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full h-12 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-medium shadow-lg shadow-emerald-500/30 transition-all duration-300 hover:scale-[1.02]"
+                className="w-full h-12 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80 text-white font-medium shadow-lg shadow-primary/30 transition-all duration-300 hover:scale-[1.02]"
                 disabled={loginLoading}
               >
                 {loginLoading ? (
@@ -163,7 +163,7 @@ export default function AdminLoginPage() {
                   href="/login"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Not an admin? <span className="text-emerald-600 hover:text-emerald-700 font-medium">Sign in as stakeholder</span>
+                  Not an admin? <span className="text-primary hover:text-primary/80 font-medium">Sign in as stakeholder</span>
                 </Link>
               </div>
             </form>

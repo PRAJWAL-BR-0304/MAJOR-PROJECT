@@ -76,11 +76,11 @@ export function AboutAssistant() {
     <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
       <CardHeader className="space-y-2">
         <CardTitle className="text-xl md:text-2xl flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-emerald-600" />
+          <Sparkles className="h-5 w-5 text-primary" />
           AI-Powered Help
         </CardTitle>
         <CardDescription className="text-sm md:text-base">
-          Have questions about MediTrustChain? Ask our AI assistant.
+          Have questions about MedAssure? Ask our AI assistant.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -94,7 +94,7 @@ export function AboutAssistant() {
         <Button 
           onClick={handleQuery} 
           disabled={isLoading || !query.trim()} 
-          className="w-full bg-emerald-600 hover:bg-emerald-700"
+          className="w-full bg-primary hover:bg-primary/90"
         >
           {isLoading ? (
             <>
@@ -112,7 +112,7 @@ export function AboutAssistant() {
           <div className="p-4 bg-muted/50 rounded-lg space-y-3 border border-border/50">
             <div className="flex items-center justify-between">
                 <h4 className="font-semibold text-foreground flex items-center gap-2">
-                  <Volume2 className="h-4 w-4 text-emerald-600" />
+                  <Volume2 className="h-4 w-4 text-primary" />
                   Answer:
                 </h4>
                 {audioUri && (
@@ -121,12 +121,12 @@ export function AboutAssistant() {
                           onClick={togglePlayPause} 
                           size="icon" 
                           variant="ghost"
-                          className="hover:bg-emerald-100 dark:hover:bg-emerald-900/30"
+                          className="hover:bg-primary/10 dark:hover:bg-primary/20"
                         >
                             {isPlaying ? (
-                              <Pause className="h-4 w-4 text-emerald-600" />
+                              <Pause className="h-4 w-4 text-primary" />
                             ) : (
-                              <Play className="h-4 w-4 text-emerald-600" />
+                              <Play className="h-4 w-4 text-primary" />
                             )}
                             <span className="sr-only">{isPlaying ? 'Pause' : 'Play'}</span>
                         </Button>

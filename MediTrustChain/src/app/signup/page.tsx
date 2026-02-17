@@ -41,7 +41,7 @@ export default function SignupPage() {
   return (
     <div className="min-h-screen flex">
       {/* Left Panel - Branding */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-500 to-teal-500">
+      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-accent">
         {/* Animated background elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse" />
@@ -64,7 +64,7 @@ export default function SignupPage() {
                 <ShieldCheck className="h-10 w-10" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold tracking-tight">MediTrustChain</h1>
+                <h1 className="text-3xl font-bold tracking-tight">MedAssure</h1>
                 <p className="text-white/70 text-sm">Join the Future of Healthcare</p>
               </div>
             </div>
@@ -116,17 +116,17 @@ export default function SignupPage() {
         >
           {/* Mobile Logo */}
           <div className="lg:hidden flex items-center justify-center gap-2 mb-8">
-            <div className="p-2 bg-emerald-500/10 rounded-lg">
-              <ShieldCheck className="h-8 w-8 text-emerald-600" />
+            <div className="p-2 bg-primary/10 rounded-lg">
+              <ShieldCheck className="h-8 w-8 text-primary" />
             </div>
-            <span className="text-2xl font-bold tracking-tight">MediTrustChain</span>
+            <span className="text-2xl font-bold tracking-tight">MedAssure</span>
           </div>
 
-          <Card className="border-0 shadow-2xl shadow-emerald-500/5 bg-card/80 backdrop-blur-sm">
+          <Card className="border-0 shadow-2xl shadow-primary/5 bg-card/80 backdrop-blur-sm">
             <CardHeader className="space-y-1 pb-4">
               <div className="flex items-center gap-2 mb-2">
-                <UserPlus className="h-5 w-5 text-emerald-600" />
-                <span className="text-sm font-medium text-emerald-600">Get Started</span>
+                <UserPlus className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium text-primary">Get Started</span>
               </div>
               <CardTitle className="text-2xl sm:text-3xl font-bold">Organization Access</CardTitle>
               <CardDescription className="text-base">
@@ -169,7 +169,7 @@ export default function SignupPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       disabled={isLoading}
-                      className="h-12 pl-10 bg-background/50 border-border/50 focus:border-emerald-500 transition-colors"
+                      className="h-12 pl-10 bg-background/50 border-border/50 focus:border-primary transition-colors"
                     />
                   </div>
                 </div>
@@ -187,7 +187,7 @@ export default function SignupPage() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       disabled={isLoading}
-                      className="h-12 pl-10 bg-background/50 border-border/50 focus:border-emerald-500 transition-colors"
+                      className="h-12 pl-10 bg-background/50 border-border/50 focus:border-primary transition-colors"
                     />
                   </div>
                 </div>
@@ -206,14 +206,14 @@ export default function SignupPage() {
                     value={credentialHash}
                     onChange={(e) => setCredentialHash(e.target.value)}
                     disabled={isLoading}
-                    className="h-12 px-4 bg-background/50 border-border/50 focus:border-emerald-500 transition-colors font-mono text-sm"
+                    className="h-12 px-4 bg-background/50 border-border/50 focus:border-primary transition-colors font-mono text-sm"
                   />
                 </div>
 
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full h-12 text-base font-semibold bg-emerald-600 hover:bg-emerald-700 shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 transition-all duration-300"
+                  className="w-full h-12 text-base font-semibold bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
                   disabled={isLoading}
                 >
                   {isLoading ? (
@@ -243,7 +243,7 @@ export default function SignupPage() {
                 <div className="text-center">
                   <Link
                     href="/login"
-                    className="inline-flex items-center justify-center gap-2 text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors"
+                    className="inline-flex items-center justify-center gap-2 text-sm font-medium text-primary hover:text-primary/90 transition-colors"
                   >
                     Sign in instead
                     <ArrowRight className="h-4 w-4" />

@@ -72,9 +72,9 @@ export function UserNav() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="relative flex items-center gap-2 h-10 px-2 rounded-xl hover:bg-muted/80 transition-colors">
-          <Avatar className="h-8 w-8 border-2 border-emerald-500/20">
+          <Avatar className="h-8 w-8 border-2 border-primary/20">
             <AvatarImage src={`https://avatar.vercel.sh/${getUserEmail()}.png`} alt={getUserName()} />
-            <AvatarFallback className="bg-gradient-to-br from-emerald-500 to-teal-600 text-white text-xs font-semibold">
+            <AvatarFallback className="bg-gradient-to-br from-primary to-accent text-white text-xs font-semibold">
               {getUserInitials()}
             </AvatarFallback>
           </Avatar>
@@ -90,9 +90,9 @@ export function UserNav() {
       <DropdownMenuContent className="w-64" align="end" forceMount>
         <DropdownMenuLabel className="font-normal p-4 bg-muted/30">
           <div className="flex items-center gap-3">
-            <Avatar className="h-10 w-10 border-2 border-emerald-500/20">
+            <Avatar className="h-10 w-10 border-2 border-primary/20">
               <AvatarImage src={`https://avatar.vercel.sh/${getUserEmail()}.png`} alt={getUserName()} />
-              <AvatarFallback className="bg-gradient-to-br from-emerald-500 to-teal-600 text-white text-sm font-semibold">
+              <AvatarFallback className="bg-gradient-to-br from-primary to-accent text-white text-sm font-semibold">
                 {getUserInitials()}
               </AvatarFallback>
             </Avatar>
